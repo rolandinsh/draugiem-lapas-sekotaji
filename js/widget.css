@@ -1,0 +1,110 @@
+.draugiemwidget_shadbox{	
+		font: 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.draugiemwidget_shadbox a{
+	color:#000;
+}
+
+.draugiemwidget_shadbox .shtext{ 
+	color:#000;
+	border: 1px solid #fff;
+	/* padding-left: 60px; */
+	overflow:hidden;	
+	background-color: #fff;
+	
+}
+.draugiemwidget_shadbox .shtext .pageimage {float:left; display:inline; width:50px; margin:0 4px auto 0;}
+.draugiemwidget_shadbox .shtext a.title{ 
+	color:#000;
+	font-size:15px;
+	text-decoration: none;
+	display: block;
+	line-height:30px;
+} 
+/* draugiemwidget_pagedsc Since 0.1.4 */
+.draugiemwidget_shadbox .shtext .draugiemwidget_pagedsc {
+display:block;
+background: rgb(235,240,243); 
+padding: 2px; 
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+/* border-radius: 6px; */
+overflow: auto;
+}
+/* //draugiemwidget_pagedsc Since 0.1.4 */
+.draugiemwidget_shadbox .dfoot, 
+.draugiemwidget_shadbox .clear{
+	clear:both;
+}
+.draugiemwidget_shadbox p.clear{padding:0;	margin:0;}
+.draugiemwidget_shadbox .selfa{
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	padding-top:4px;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	color:#000;
+	background:#fff;
+}
+
+.draugiemwidget_shadbox .fancontainer{
+	width:79px;float: left;
+}
+.draugiemwidget_shadbox  .fixedcount {
+	margin:4px auto;
+}
+.draugiemwidget_shadbox .fancounts{
+	color: rgb(81,81,81);
+	font-size: 11px;
+	display: inline;
+	width:60px;
+	float:left;
+}
+
+.draugiemwidget_shadbox .joinbutton{
+	float:right;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	font-size: 12px;
+	font-weight: bold;
+	width:100px;
+	background-image:url(widget_join.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	display: inline;
+	float:left;
+}
+.draugiemwidget_shadbox .joinbutton a{
+	text-decoration:none;
+	display: block;
+	height:26px;
+	color: #fff;
+}
+
+.draugiemwidget_shadbox .fanlist{
+	border: 1px solid #ffffff;
+	padding: 5px 0 10px 0;
+}
+
+.draugiemwidget_shadbox .fanlist a.name { 
+	text-align:center;
+	display: block;
+	overflow: hidden;
+	height: 14px;
+	width: auto !important;
+}
+
+
+.draugiemwidget_shadbox .fanlist a.pbg{
+	background: url(pic_bg.png) center no-repeat;
+	display: block;
+	width: auto !important;
+}
+
+.draugiemwidget_shadbox .fanlist a.pbg div{
+	background-position: center;
+	background-repeat: no-repeat;	
+	height:75px;
+}

@@ -1,0 +1,136 @@
+# Translation of Draugiem.lv/lapas Fan page.
+# Copyright (C) 2010 Rolands Umbrovskis
+# This file is distributed under the same license as the BuddyPress package.
+# Rolands Umbrovskis <rolands@mediabox.lv>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: frypepage_widget\n"
+"Report-Msgid-Bugs-To: webapp@mediabox.lv\n"
+"POT-Creation-Date: 2010-03-108 06:11+0000\n"
+"PO-Revision-Date: 2011-11-28 17:30+0200\n"
+"Last-Translator: rolandinsh <rolands@e-art.lv>\n"
+"Language-Team: Latvian <webapp@mediabox.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Latvian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+
+#: frypepage_widget.php:42
+msgid "Shows draugiem.lv/lapas users"
+msgstr "Parāda draugiem.lv lapas fanus"
+
+#: frypepage_widget.php:46
+msgid "Draugiem Lapas Widget"
+msgstr "Draugiem.lv/lapas logdaļa"
+
+#: frypepage_widget.php:107
+msgid "Title:"
+msgstr "Virsraksts:"
+
+#: frypepage_widget.php:113
+msgid "Page URL:"
+msgstr "Lapas URL:"
+
+#: frypepage_widget.php:119
+msgid "Width:"
+msgstr "Platums:"
+
+#: frypepage_widget.php:120
+msgid "recomended:"
+msgstr "ieteicams:"
+
+#: frypepage_widget.php:124
+msgid "How many users to show?"
+msgstr "Cik fanus rādīt?"
+
+# frypepage_widget.php:93
+#: js/fans.js , frypepage_widget.php
+msgid "fans"
+msgstr "fani"
+
+# Show backlink to draugiem.lv/lapas
+#: frypepage_widget.php
+msgid "Show backlink to draugiem.lv/lapas?"
+msgstr "Vai rādīt saiti uz draugiem.lv/lapas?"
+
+# frypepage_widget.php
+#: frypepage_widget.php
+msgid "no"
+msgstr "nē"
+
+# frypepage_widget.php
+#: frypepage_widget.php
+msgid "yes"
+msgstr "jā"
+
+#: frypepage_widget.php
+msgid "StyleSheet (CSS) URL"
+msgstr "Stila lapas (CSS) saite ar http://"
+
+#: frypepage_widget.php
+msgid "Theme (CSS) URL"
+msgstr "Dizaina CSS saite"
+
+#: frypepage_widget.php
+msgid "0 for none"
+msgstr "0, lai nerādītu"
+
+#: frypepage_widget.php
+msgid "Help?"
+msgstr "Palīdzība!"
+
+#: frypepage_widget.php
+msgid "(in new window/tab)"
+msgstr "(atvērsies jaunā logā)"
+
+#: frypepage_widget.php
+msgid "Lenght of page description"
+msgstr "Lapas apraksta garums (simboli)"
+
+#: frypepage_widget.php
+msgid "Settings"
+msgstr "Uzstādījumi"
+
+#: frypepage_widget.php
+msgid "FAQ"
+msgstr "B.U.J."
+
+#: frypepage_widget.php
+msgid "Support"
+msgstr "Atbalsts"
+
+#: frypepage_widget.php
+msgid "Donate"
+msgstr "Ziedo"
+
+#: frypepage_widget.php
+msgid "Feature request"
+msgstr "Papildfunkciju pieprasījums"
+
+msgid "Frype Event Widget"
+msgstr "Draugiem.lv pasākuma logdaļa"
+
+msgid "Frype Event ID:"
+msgstr "Draugiem.lv pasākuma ID"
+
+msgid "Frype Event Widget Title:"
+msgstr "Draugiem.lv pasākuma logdaļas virsraksts"
+
+#: frypepage_widget.php
+msgid "Show SAY?"
+msgstr "Rādīt RUNĀ?"
+
+#: frypepage_widget.php
+msgid "How much SAY entries to show?"
+msgstr "Cik RUNĀ ierakstus rādīt?"
+
+#. Plugin Name of an extension
+msgid "Draugiem.lv/lapas Fan page"
+msgstr "Draugiem.lv/lapas fanu lapa"
+
+#. Description of an extension
+msgid "Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan"
+msgstr "Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu"
+

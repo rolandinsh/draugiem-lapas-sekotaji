@@ -1,0 +1,133 @@
+# Translation of Draugiem.lv/lapas Fan page.
+# Copyright (C) 2010 Rolands Umbrovskis
+# This file is distributed under the same license as the BuddyPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: frypepage_widget\n"
+"Report-Msgid-Bugs-To: webapp@mediabox.lv\n"
+"POT-Creation-Date: 2010-03-108 06:11+0000\n"
+"PO-Revision-Date: 2010-03-11 11:01+0200\n"
+"Last-Translator: rolandinsh <rolands@e-art.lv>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Latvian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+
+#: frypepage_widget.php:42
+msgid "Shows draugiem.lv/lapas users"
+msgstr ""
+
+#: frypepage_widget.php:46
+msgid "Draugiem Lapas Widget"
+msgstr ""
+
+#: frypepage_widget.php:107
+msgid "Title:"
+msgstr ""
+
+#: frypepage_widget.php:113
+msgid "Page URL:"
+msgstr ""
+
+#: frypepage_widget.php:119
+msgid "Width:"
+msgstr ""
+
+#: frypepage_widget.php:120
+msgid "recomended:"
+msgstr ""
+
+#: frypepage_widget.php:124
+msgid "How many users to show?"
+msgstr ""
+
+#: js/fans.js , frypepage_widget.php
+msgid "fans"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Show backlink to draugiem.lv/lapas?"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "no"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "yes"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "StyleSheet (CSS) URL"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Theme (CSS) URL"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "0 for none"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Help?"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "(in new window/tab)"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Lenght of page description"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Settings"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "FAQ"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Support"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Donate"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "Feature request"
+msgstr ""
+
+msgid "Frype Event Widget"
+msgstr ""
+
+msgid "Frype Event ID:"
+msgstr ""
+
+msgid "Frype Event Widget Title:"
+msgstr ""
+
+# 2.0
+
+#: frypepage_widget.php
+msgid "Show SAY?"
+msgstr ""
+
+#: frypepage_widget.php
+msgid "How much SAY entries to show?"
+msgstr ""
+
+#. Plugin Name of an extension
+msgid "Draugiem.lv/lapas Fan page"
+msgstr ""
+
+#. Description of an extension
+msgid "Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan"
+msgstr ""
