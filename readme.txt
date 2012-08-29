@@ -3,18 +3,37 @@ Contributors: rolandinsh
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z4ALL9WUMY3CL&lc=LV&item_name=Umbrovskis%2e%20WordPress%20plugins&item_number=002&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: sidebar, widget, frype, draugiem.lv, draugiem, fan page, frype.com, JSON, WPMU, WordPress Mustisite, WordPress MU, WPMS, draugiem, social networking, social network, fan widget, sidebar widget,
 Requires at least: 2.6
-Tested up to: 3.3
-Stable tag: 2.2
+Tested up to: 3.4.1
+Stable tag: 2.2.3
+License: SimpleMediaCode
+License URI: http://simplemediacode.com/license/
 
 Draugiem.lv biznesa lapu un pasākumu fanu WordPress spraudnis draugiem.lv lietotājiem
 
 == Description ==
 
-Draugiem.lv biznesa lapu fanu WordPress  spraudnis ir paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem ir mājas lapas vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
+[Draugiem.lv biznesa lapu fanu WordPress spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) ir paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem ir mājas lapas vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
 
-Gaidīšu arī lietotāju [ieteikumus](http://atbalsts.mediabox.lv/temats/ieteikumi/#new-post), [komentārus](http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/), [kļūdu paziņojumus](http://atbalsts.mediabox.lv/diskusija/draugiem-lv-biznesa-lapu-wordpress-spraudnis/#new-post) kā arī visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://darbi.mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
+Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://darbi.mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
 
 Lai lietotu spraudni ir jābūt izveidotai savai lapai [draugiem.lv/lapas](http://e-art.lv/x/draugiemlapas).
+
+[GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) | code.google.com [SVN](http://code.google.com/p/wordpress-draugiem-lapas-fani-plugin/) | [draugiem.lv/UmbrovskisCom](http://www.draugiem.lv/umbrovskiscom/)
+
+PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugins/wordpress-draugiem/)
+
+= Iespējas =
+
+* Tulkot vairākās valodās
+* Dot logdaļai nosaukumu, platumu un noteikt sekotāju skaitu
+* Ievietot jebkurā rakstā vai lapā
+
+= Latviski: =
+* [Draugiem.lv biznesa lapu sekotāju spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
+* Apskaties citus [Wordpress risinājumus](http://mediabox.lv/wordpress/).
+* [Spraudņa Wiki lapa](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis)
+
+= English =
 
 This plugin makes it easy to add draugiem.lv/lapas (frype.com) fan page to sidebar of WordPress blog.
 
@@ -28,26 +47,23 @@ You `MUST` have a page on draugiem.lv/lapas to use this widget.
 * widget width
 * shortcode
 
-= Iespējas =
-
-* Tulkot vairākās valodās
-* Dot logdaļai nosaukumu, platumu un noteikt sekotāju skaitu
-* Ievietot jebkurā rakstā vai lapā
-
-= Latviski: =
-* [Draugiem.lv biznesa lapu sekotāju spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
-* Apskaties citus [Wordpress risinājumus](http://mediabox.lv/wordpress/).
-* [Spraudņa Wiki lapa](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis)
-
-= English: =
 * [Draugiem.lv Business page Followers page](http://simplemediacode.info/wordpress-plugins/draugiem-lv-lapas-fan-page/).
 * Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
 
 == Changelog ==
 
+= 2.2.2 =
+* javascript api netiks ielādēts reģistrācijas un autorizācijas lapās.
+* WIKI informācija par [2.2.2 versiju](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis#2.2.2)
+
+= 2.2.1 =
+* Romanian laguage via Web Hosting Geeks / Alexander Ovsov
+* Rumāņu valodas tulkojums via Web Hosting Geeks / Alexander Ovsov
+* WIKI informācija par [2.2.1 versiju](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis#2.2.1)
+
 = 2.2 =
 * pievienots Pasākumu sekotāju logdaļa
-* pievienots [frypevent] un [frypeevent] 
+* pievienots `[frypevent]` un `[frypeevent]` 
 * WIKI informācija par [2.2 versiju](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis#2.2)
 
 = 2.1 =
@@ -91,6 +107,12 @@ You can always ask in comments: [Draugiem.lv/lapas Fan page](http://simplemediac
 Visi jautājumi var tikt uzdoti: [Draugiem.lv biznesa lapu sektāju atbalsta lapā](http://atbalsts.mediabox.lv/diskusija/draugiem-lv-biznesa-lapu-wordpress-spraudnis/#new-post).
 
 == Upgrade Notice ==
+
+= 2.2.2 =
+.ro language
+
+= 2.2.1 =
+.ro language
 
 = 2.2 =
 Pasākumu sekotāju logdaļa (widget)
