@@ -38,7 +38,8 @@ echo 'WordPress homepages, WP plugin and theme development. Find out: <a href="h
 			if ($maxitems == 0): 
 		echo '<p><a href="http://simplemediacode.com/" title="Visit SimpleMediaCode.com">SimpleMediaCode.com</a></p>
 			<p><a href="http://mediabox.lv/" title="MediaBox.lv">MediaBox.lv</a></p>
-			<p><a href="http://umbrovskis.com/" title="Umbrovskis.com">Umbrovskis.com</a></p>';
+			<p><a href="http://umbrovskis.com/" title="Umbrovskis.com">Umbrovskis.com</a></p>
+			<p><a href="http://umbrovskis.lv/" title="Umbrovskis.lv">Umbrovskis.lv</a></p>';
 			else:
 			// Loop through each feed item and display each item as a hyperlink.
 				foreach ( $mediaboxrss_items as $item ) : ?>
@@ -75,8 +76,12 @@ echo 'WordPress homepages, WP plugin and theme development. Find out: <a href="h
 }
 
 function mediabox_ffp_add_dashboard_widgets() {
-	if(WPLANG=='lv'){ $adminwidnosaukums = 'MediaBox.lv/wordpress';}else{ $adminwidnosaukums = 'SimpleMediaCode.com/wordpress';}
-	wp_add_dashboard_widget('mediabox_ffp_dashboard_widget', $adminwidnosaukums, 'mediabox_feedlink_ffp');	
+	if(WPLANG=='lv'){
+		$adminwidnosaukums = 'MediaBox.lv';
+	}else{
+		$adminwidnosaukums = 'SimpleMediaCode.com';
+	}
+	wp_add_dashboard_widget('mediabox_ffp_dashboard_widget', $adminwidnosaukums.'/wordpress', 'mediabox_feedlink_ffp');	
 } 
 
 add_action('wp_dashboard_setup', 'mediabox_ffp_add_dashboard_widgets' );

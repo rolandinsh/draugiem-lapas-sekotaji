@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
- * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-2-0-3
+ * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-2-0-4
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 2.2.3
- * Stable tag: 2.2.3
- * Requires at least: 2.6
+ * Version: 2.3.0
+ * Stable tag: 2.3.0
+ * Requires at least: 3.3
  * Tested up to: 3.4.1
  * Author: Rolands Umbrovskis
  * Author URI: http://umbrovskis.com
@@ -44,7 +44,7 @@ if (!defined('ABSPATH')) exit;
  */
 add_action( 'widgets_init', 'meblogfrypepage_load_widgets' );
 
-define('FFPVERSION','2.2.3');
+define('FFPVERSION','2.3.0');
 define('FRYPEFANPAGEF','draugiemlvlapas-fan-page');
 define('FRYPEFANPAGED',dirname(__FILE__)); // widget path location @since 0.1.6
 define('FRYPEFANPAGEINC',FRYPEFANPAGED.'/includes_fd'); // widget path location @since 2.1.1
@@ -91,15 +91,35 @@ if ( !function_exists( 'smc_is_login_page' ) ) {
 if ( !function_exists( 'smc_draugiem_say_headinit' ) ) {
 	function smc_draugiem_say_headinit() {
 		if( !is_admin()&&!smc_is_login_page()){
-			wp_register_script('draugiem_api',DRAUGIEMJSAPI,array(),'1.232', false);
+			wp_register_script('draugiem_api',DRAUGIEMJSAPI,array(),'1.288', false);
 			wp_enqueue_script('draugiem_api');
 		}
 	}    
 	add_action('init', 'smc_draugiem_say_headinit');
 }
+/* NOT the best practice. Will fix! */
+/**
+ * Add extra CSS.
+ * Adding custom style to plugin's output.
+ *
+ * @since 2.3.0
+ * @version 0.1
+ * @date 2012-09-05
+*/
 
 
-function meblogfrypepage_set_plugin_meta($links, $file) {
+function test_get_wid(){
+	$mfp_w_c = new MeblogFrypePage_Widget();
+	$mfp_w_cs = $mfp_w_c->get_settings();
+	echo '<!-- '."\n";
+	//var_dump($mfp_w_cs[3])."\n";
+	var_dump($mfp_w_cs)."\n";
+	echo "\n".time().' -->'."\n";
+}
+add_filter('wp_head','test_get_wid',0);
+
+
+function mediaboxlv_fp_set_plugin_meta($links, $file) {
 	$plugin = plugin_basename(__FILE__);
 	// create link
 	if ($file == $plugin) {
@@ -116,7 +136,7 @@ function meblogfrypepage_set_plugin_meta($links, $file) {
 	return $links;
 }
 
-add_filter( 'plugin_row_meta', 'meblogfrypepage_set_plugin_meta', 10, 2 );
+add_filter( 'plugin_row_meta', 'mediaboxlv_fp_set_plugin_meta', 10, 2 );
 
 /**
  * Register our widget.
@@ -135,10 +155,10 @@ function meblogfrypepage_load_widgets() {
  *
  * @since 0.1
  * @version 0.2
- * @since 0.1.8
  * @date 2011-01-21
 */
 load_plugin_textdomain( 'frypepage_widget', false, dirname(plugin_basename(__FILE__)) . '/lang/' ); 
+
 
 // Fun starts here
 class MeblogFrypePage_Widget extends WP_Widget {
@@ -147,11 +167,23 @@ class MeblogFrypePage_Widget extends WP_Widget {
 */
 	function MeblogFrypePage_Widget() {
 		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'meblogfrypepage', 'description' => __('Shows draugiem.lv/lapas users', 'frypepage_widget') );
+		$widget_ops = array(
+			'classname' => 'meblogfrypepage',
+			'description' => __('Shows draugiem.lv/lapas users', 'frypepage_widget')
+		);
 		/* Widget control settings. */
-		$control_ops = array( 'width' => 300, 'height' => 200, 'id_base' => 'meblogfrypepage-widget' );
+		$control_ops = array(
+			'width' => 300,
+			'height' => 200,
+			'id_base' => 'meblogfrypepage-widget'
+		);
 		/* Create the widget. */
-		$this->WP_Widget( 'meblogfrypepage-widget', __('Draugiem Lapas Widget', 'frypepage_widget'), $widget_ops, $control_ops );
+		$this->WP_Widget(
+			'meblogfrypepage-widget',
+			__('Draugiem Lapas Widget', 'frypepage_widget'),
+			$widget_ops,
+			$control_ops
+		);
 		//Additional links on the plugin page
 		// REMOVED 0.2.1:@28
 
@@ -174,29 +206,36 @@ class MeblogFrypePage_Widget extends WP_Widget {
 		$show_pageaboutlenght = $instance['show_aboutpagelenght'];
 		$show_saycount = $instance['show_saycount'];
 		$show_saytexts = $instance['show_saytexts'];
+		
+		$dfp_u = $instance['dfp_u'];
 
 		
-		$widgetid = $args['widget_id']; /* magic! *** unique id */
-		if(!$widgetid) $widgetid=987654;
+		$widgetid = $dfp_u; /* magic! *** unique id */
+		if(!$widgetid||$widgetid==''){$widgetid=md5(mt_rand(100000000,time()));}
 		if(!$wheight){$wheight = '230';}
 		// Maybe remove in next release!
 		if(!is_numeric($show_pageaboutlenght)||!$show_pageaboutlenght){$show_pageaboutlenght='200';}
+
 		/* Before widget (defined by themes). */
 		echo $before_widget;
 echo "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".FFPVERSION." via http://umbrovskis.com | MediaBox.lv | SimpleMediaCode.com -->\n".''."\n";
 		/* Display the widget title if one was input (before and after defined by themes). */
 		if ($title)	echo $before_title . $title . $after_title;?>
-<div id="fansblock<?php echo $widgetid;?>"></div>
-<style type="text/css">#fansblock<?php echo $widgetid;?>{width:<?php echo $wwidth;?>px; height:<?php echo $wheight;?>px;border: 1px solid #c9c9c9; }#fansblock<?php echo $widgetid;?> div {overflow:hidden; height:100%; min-height:264px;}#fansblock<?php echo $widgetid;?> iframe{ overflow:hidden; height:100%; min-height:264px;}.dfoot{margin-top:4px;}</style>
-
+<div id="fansblock<?php echo $widgetid;?>" class="usersfrp"></div>
+<style>
+<?php echo "#fansblock{$widgetid}{width:{$wwidth}px; height:{$wheight}px !important;border: 1px solid #c9c9c9; }#fansblock{$widgetid} div {overflow:hidden; height:100%; min-height:264px;}#fansblock{$widgetid} iframe{ overflow:hidden; height:100%; min-height:264px;}.dfoot{margin-top:4px;} ";?>
+</style>
+<?php 
+/* so we can overwrite defaults and generated values */
+if($show_cssfrp):?><link type="text/css" media="all" href="<?php echo $show_cssfrp;?>?v=<?php echo $widgetid;?>" /><?php endif;?>
 <script type="text/javascript">
 var fans = new DApi.BizFans( {
 	name:'<?php echo mb_strtolower($name, 'UTF-8');?>',
-	<?php if($show_usersfrp==0):?>
+<?php if($show_usersfrp==0):?>
 	showFans:0,
-	<?php else:?>
+<?php else:?>
 	showFans:1,
-	<?php endif;?>
+<?php endif;?>
 	count:<?php echo $show_usersfrp;?>,
 	showSay:<?php echo $show_saytexts;?>,
 	saycount:<?php echo $show_saycount;?>
@@ -227,6 +266,10 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".FFPVERSION."  beidza
 		/* @since 2.0 */
 		$instance['show_saycount'] = $new_instance['show_saycount'];
 		$instance['show_saytexts'] = $new_instance['show_saytexts'];
+		/* @since 2.3 */
+		$instance['dfp_u'] = $new_instance['dfp_u'];
+		
+		
 
 		return $instance;
 	}
@@ -248,6 +291,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".FFPVERSION."  beidza
 		'show_cssfrp' =>WP_PLUGIN_URL.'/'.FRYPEFANPAGEF.'/js/widget.css',
 		'show_aboutpagelenght'=> '1000',
 		'show_saycount' => '3',
+		'dfp_u' => md5(mt_rand(100000000,time())),
 		'show_saytexts'=>'0'
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
@@ -297,6 +341,29 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".FFPVERSION."  beidza
         <span class="small"><?php _e('0 for none', 'frypepage_widget'); ?></span><br />
         	<input id="<?php echo $this->get_field_id( 'show_saycount' ); ?>" name="<?php echo $this->get_field_name( 'show_saycount' ); ?>" value="<?php echo $instance['show_saycount']; ?>" style="width:100%;" />
 		</p>
+		
+		<!-- Show CSS? Input -->
+		<p><label for="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>"><?php _e('StyleSheet (CSS) URL', 'frypepage_widget'); ?></label><br />
+        <span class="small"><?php _e('Theme (CSS) URL', 'frypepage_widget'); ?>: <strong><?php bloginfo('stylesheet_url'); ?></strong></span><br />
+        <span class="small"><strong><?php echo WP_PLUGIN_URL.'/'.FRYPEFANPAGEF.'/js/widget.css'; ?></strong></span><br />
+        	<input id="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>"
+				name="<?php echo $this->get_field_name( 'show_cssfrp' ); ?>"
+				value="<?php echo $instance['show_cssfrp']; ?>"
+				style="width:100%;"
+			/>
+		</p>
+		
+		<!-- Unique ID Input -->
+		<?php 
+		$dfp_uid = $instance['dfp_u'];
+		if($dfp_uid==''||!$dfp_uid): $dfp_uid = md5(mt_rand(100000000,time())); endif;?>
+		<p><label for="<?php echo $this->get_field_id( 'dfp_u' ); ?>"><?php _e('Unique ID', 'frypepage_widget'); ?></label><br />
+        	<input id="<?php echo $this->get_field_id( 'dfp_u' ); ?>"
+				name="<?php echo $this->get_field_name( 'dfp_u' ); ?>"
+				value="<?php echo $dfp_uid; ?>"
+				style="width:100%;"
+			/>
+		</p>
         <p>Šis darbs ir licencēts ar GPL.<br />
         <img src="<?php echo FRYPEFANPAGEI;?>/creative-commons-by-nc-sa-88x31.png" width="88" height="31" alt="" /><br />
         <span class="small">Atļaujas ārpus šīs licences ietvariem var iegūt <a href="http://umbrovskis.lv/autortiesibas/" target="_blank" title="Autortiesības">umbrovskis.lv</a> [&copy; 1982-<?php echo date('Y')+70;?>]</span></p>
@@ -309,12 +376,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".FFPVERSION."  beidza
  * @date 2011-08-12
 */
  ?>
-		<!-- Show CSS? Input -->
-		<p><label for="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>"><?php _e('StyleSheet (CSS) URL', 'frypepage_widget'); ?></label><br />
-        <span class="small"><?php _e('Theme (CSS) URL', 'frypepage_widget'); ?>: <strong><?php bloginfo('stylesheet_url'); ?></strong></span><br />
-        <span class="small"><strong><?php echo WP_PLUGIN_URL.'/'.FRYPEFANPAGEF.'/js/widget.css'; ?></strong></span><br />
-        	<input id="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>" name="<?php echo $this->get_field_name( 'show_cssfrp' ); ?>" value="<?php echo $instance['show_cssfrp']; ?>" style="width:100%;" />
-		</p>
+
 		<!-- Show lenght? Input -->
 		<p><label for="<?php echo $this->get_field_id( 'show_aboutpagelenght' ); ?>"><?php _e('Lenght of page description', 'frypepage_widget'); ?></label><br />
         	<input id="<?php echo $this->get_field_id( 'show_aboutpagelenght' ); ?>" name="<?php echo $this->get_field_name( 'show_aboutpagelenght' ); ?>" value="<?php echo $instance['show_aboutpagelenght']; ?>" style="width:100%;" />
@@ -414,6 +476,7 @@ class Frype_EventWidget extends WP_Widget {
 		$frypeeventid = apply_filters( 'widget_frypeeventid', $instance['frypeeventid'] );
 		$frypeeventcount = apply_filters( 'widget_frypeeventcount', $instance['frypeeventcount'] );
 		$frypeeventwwidth = apply_filters( 'widget_frypeeventwwidth', $instance['frypeeventwwidth'] );
+		$frypeeventiniqiue = apply_filters( 'widget_frypeeventiniqiue', $instance['frypeeventiniqiue'] );
 		
 		echo $before_widget;
 		if ( $title ) { echo $before_title . $title . $after_title;}

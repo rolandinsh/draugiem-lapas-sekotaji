@@ -1,12 +1,13 @@
 ﻿=== Draugiem.lv biznesa lapu sekotāju spraudnis ===
 Contributors: rolandinsh
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z4ALL9WUMY3CL&lc=LV&item_name=Umbrovskis%2e%20WordPress%20plugins&item_number=002&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
-Tags: sidebar, widget, frype, draugiem.lv, draugiem, fan page, frype.com, JSON, WPMU, WordPress Mustisite, WordPress MU, WPMS, draugiem, social networking, social network, fan widget, sidebar widget,
+Donate link: http://xh.lv/wpdonate1
+Tags: sidebar, widget, frype, draugiem.lv, draugiem, fan page, frype.com, JSON, WPMU, WordPress Mustisite, WordPress MU, WPMS, draugiem, social networking, social network, fan widget, sidebar widget
 Requires at least: 2.6
 Tested up to: 3.4.1
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: SimpleMediaCode
 License URI: http://simplemediacode.com/license/
+
 
 Draugiem.lv biznesa lapu un pasākumu fanu WordPress spraudnis draugiem.lv lietotājiem
 
@@ -18,7 +19,7 @@ Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://darbi.mediabo
 
 Lai lietotu spraudni ir jābūt izveidotai savai lapai [draugiem.lv/lapas](http://e-art.lv/x/draugiemlapas).
 
-[GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) | code.google.com [SVN](http://code.google.com/p/wordpress-draugiem-lapas-fani-plugin/) | [draugiem.lv/UmbrovskisCom](http://www.draugiem.lv/umbrovskiscom/)
+[GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) | [code.google.com SVN](http://code.google.com/p/wordpress-draugiem-lapas-fani-plugin/) | [MediaBox.lv](http://mediabox.lv/ "WordPress mājas lapu izstrāde/atbalsts")
 
 PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugins/wordpress-draugiem/)
 
@@ -51,6 +52,10 @@ You `MUST` have a page on draugiem.lv/lapas to use this widget.
 * Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
 
 == Changelog ==
+
+= 2.2.4 =
+* atgriežas CSS iespējas.
+* WIKI informācija par [2.2.4 versiju](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis#2.2.4)
 
 = 2.2.2 =
 * javascript api netiks ielādēts reģistrācijas un autorizācijas lapās.
@@ -107,6 +112,9 @@ You can always ask in comments: [Draugiem.lv/lapas Fan page](http://simplemediac
 Visi jautājumi var tikt uzdoti: [Draugiem.lv biznesa lapu sektāju atbalsta lapā](http://atbalsts.mediabox.lv/diskusija/draugiem-lv-biznesa-lapu-wordpress-spraudnis/#new-post).
 
 == Upgrade Notice ==
+
+= 2.2.2 =
+* atgriežas CSS iespējas
 
 = 2.2.2 =
 .ro language
