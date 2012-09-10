@@ -52,7 +52,7 @@ define('FRYPEFANPAGEURI',plugin_dir_url(__FILE__)); // widget url location @sinc
 define('FRYPEFANPAGEI',plugins_url(FRYPEFANPAGEF).'/img'); // Image location @since 0.1.6
 define('FRYPEFANPAGEINFO','http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/'); // Plugin info
 if (!defined('DRAUGIEMJSAPI')) {
-	$ishttpsurl = (!empty($_SERVER['HTTPS'])) ? "https:" : "http:"; 
+	$ishttpsurl = is_ssl() ? 'https:' : 'http:'; 
 	define('DRAUGIEMJSAPI',$ishttpsurl.'//www.draugiem.lv/api/api.js');
 } // unified constants across plugins @since 2.2.3
 /**
