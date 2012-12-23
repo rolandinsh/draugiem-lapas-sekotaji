@@ -3,11 +3,10 @@ Contributors: rolandinsh
 Donate link: http://xh.lv/wpdonate1
 Tags: sidebar, widget, frype, draugiem.lv, draugiem, fan page, frype.com, JSON, WPMU, WordPress Mustisite, WordPress MU, WPMS, draugiem, social networking, social network, fan widget, sidebar widget
 Requires at least: 3.3
-Tested up to: 3.4.1
-Stable tag: 2.3.0
+Tested up to: 3.5
+Stable tag: 3.0
 License: SimpleMediaCode
 License URI: http://simplemediacode.com/license/
-
 
 Draugiem.lv biznesa lapu un pasākumu fanu WordPress spraudnis draugiem.lv lietotājiem
 
@@ -19,7 +18,9 @@ Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://darbi.mediabo
 
 Lai lietotu spraudni ir jābūt izveidotai savai lapai [draugiem.lv/lapas](http://e-art.lv/x/draugiemlapas).
 
-[GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) | [code.google.com SVN](http://code.google.com/p/wordpress-draugiem-lapas-fani-plugin/) | [MediaBox.lv](http://mediabox.lv/ "WordPress mājas lapu izstrāde/atbalsts")
+[GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) 
+[code.google.com SVN](http://code.google.com/p/wordpress-draugiem-lapas-fani-plugin/) 
+[MediaBox.lv](http://mediabox.lv/ "WordPress mājas lapu izstrāde/atbalsts") 
 
 PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugins/wordpress-draugiem/)
 
@@ -52,6 +53,10 @@ You `MUST` have a page on draugiem.lv/lapas to use this widget.
 * Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
 
 == Changelog ==
+
+= 3.0 =
+* pilnībā pārrakstīts kods.
+* SVARĪGAS izmaiņas: info [atbalsts.mediabox.lv](http://atbalsts.mediabox.lv/temats/svarigas-3-4-0-versijas-izmainas/)
 
 = 2.2.4 =
 * atgriežas CSS iespējas.
@@ -113,24 +118,13 @@ Visi jautājumi var tikt uzdoti: [Draugiem.lv biznesa lapu sektāju atbalsta lap
 
 == Upgrade Notice ==
 
+= 3.0 =
+* pilnībā pārrakstīts kods.
+* SVARĪGAS izmaiņas: info [atbalsts.mediabox.lv](http://atbalsts.mediabox.lv/temats/svarigas-3-4-0-versijas-izmainas/)
+
 = 2.2.2 =
 * atgriežas CSS iespējas
 
-= 2.2.2 =
-.ro language
-
-= 2.2.1 =
-.ro language
-
-= 2.2 =
-Pasākumu sekotāju logdaļa (widget)
-
-= 2.1 =
-New shortcode
-
-= 2.0 =
-New makeover
-
 == Screenshots ==
-1. 2.0 Full futured example http://darbi.mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/
-2. 2.0 Full futured admin side widget example http://darbi.mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/
+1. 2.0 info http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/
+2. 2.0 info http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/
