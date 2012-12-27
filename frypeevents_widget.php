@@ -7,7 +7,7 @@ if ( !function_exists( 'add_action' ) ) {
 	exit;
 }
 
-//new MB_FrypePage_Plugin;
+new MB_FrypeEvents_Plugin;
 
 class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin{
 	public $eventsversion = '2.1.2';

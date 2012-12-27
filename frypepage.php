@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
- * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-0-0
+ * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-0-1
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 3.0
- * Stable tag: 3.0
+ * Version: 3.0.1
+ * Stable tag: 3.0.1
  * Requires at least: 3.3
  * Tested up to: 3.5
  * Author: Rolands Umbrovskis
@@ -54,9 +54,9 @@ new MB_FrypePage_Plugin;
 
 
 class MB_FrypePage_Plugin{
-	public $version = '3.0';
+	public $version = '3.0.1';
 	public $frypiapiv = '1.783';
-	public $relx = 201212222202;
+	public $relx = 201212230306;
 	public $draugiemjsapi ='//www.draugiem.lv/api/api.js';
 	public $ffpfolder ='draugiemlvlapas-fan-page';
 	public $ffpinfo ='http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/';
