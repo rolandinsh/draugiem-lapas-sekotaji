@@ -40,7 +40,7 @@ class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin{
 	// USAGE / LIETOŠANA
 	// [frypeevent id='18368189' width='300' users='5' uqid='951357456852']
 	
-	$fefs = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".$this->eventsversion." via http://umbrovskis.com  / Pasākumi: $id ($uqid) -->\n";
+	$fefs = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".$this->eventsversion." http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/  / Pasākumi: $id ($uqid) -->\n";
 	$fefs .='<style>#evFansBlock'.$id.$uqid.' { width:'.$width.'px;border: 1px solid #c9c9c9; }</style>'; 
 	$fefs .='<div id="evFansBlock'.$id.$uqid.'"></div>';
 	
@@ -49,7 +49,7 @@ $fefs .=<<<EOT
 	var fans = new DApi.EvFans( {name:'ev/$id/', count:$users} );
 EOT;
 	$fefs .="\n".'fans.append(\'evFansBlock'.$id.$uqid.'\');</script>';
-	$fefs .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".$this->eventsversion." via http://umbrovskis.com  / Pasākumi: $id ($uqid) beigas  -->\n".''."\n";
+	$fefs .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ".$this->eventsversion." http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/  / Pasākumi: $id ($uqid) beigas  -->\n".''."\n";
 	
 	return $fefs;
 	
@@ -84,7 +84,7 @@ class Frype_EventWidget extends WP_Widget {
 		if ( $title ) { echo $before_title . $title . $after_title;}
 
 
-		echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com  / Event: '.$frypeeventid.'  -->';
+		echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/  / Event: '.$frypeeventid.'  -->';
 		?>
 		<div id="evFansBlock<?php echo $frypeeventid;?>"></div>
 		<style>#evFansBlock<?php echo $frypeeventid;?> { width:<?php echo $frypeeventwwidth; ?>px;border: 1px solid #c9c9c9; }</style>
@@ -96,7 +96,7 @@ class Frype_EventWidget extends WP_Widget {
 		fans.append( 'evFansBlock<?php echo $frypeeventid;?>' );
 		</script>
 		<?php 
-		echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis '.FFPVERSION.' via http://umbrovskis.com  / '.$frypeeventid.' beigas  -->';
+		echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis '.FFPVERSION.' http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/  / '.$frypeeventid.' beigas  -->';
 		echo $after_widget;
 	}
 

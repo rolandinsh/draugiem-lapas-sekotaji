@@ -54,9 +54,9 @@ new MB_FrypePage_Plugin;
 
 
 class MB_FrypePage_Plugin{
-	public $version = '3.0.1';
+	public $version = '3.4.1';
 	public $frypiapiv = '1.783';
-	public $relx = 201212230306;
+	public $relx = 201301011135;
 	public $draugiemjsapi ='//www.draugiem.lv/api/api.js';
 	public $ffpfolder ='draugiemlvlapas-fan-page';
 	public $ffpinfo ='http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/';
@@ -129,7 +129,7 @@ class MB_FrypePage_Plugin{
 		extract(shortcode_atts(array(
 		'name'		=>	'umbrovskiscom', // page name (without http://)
 		'width'		=>	'300',
-		'height'		=>	'230',
+		'height'	=>	'230',
 		'users'		=>	'0', // how many users show?
 		'say'		=>	'0', // show = 1; hide=0
 		'saytext'	=>	'0', // count
@@ -137,7 +137,7 @@ class MB_FrypePage_Plugin{
 		), $atts));
 		// ------------------
 	
-		$fwshort = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com  / $fwid  -->\n";
+		$fwshort = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/  / $fwid  -->\n";
 		$fwshort .='<style>#fansblock'.$fwid.'{width:'.$width.'px; height:'.$height.'px;}#fansblock'.$fwid.' div{ overflow:hidden; height:100%;}#fansblock'.$fwid.' iframe{ overflow:hidden; height:100%; min-height:264px;}</style>'; 
 		$fwshort .='<div id="fansblock'.$fwid.'"></div>';
 		
@@ -157,7 +157,7 @@ class MB_FrypePage_Plugin{
 var fans2 = new DApi.BizFans({name:'$ffps_name',showFans:$showfanss, count:$users, showSay:$say, saycount:$saytext });
 EOT;
 		$fwshort .='fans2.append(\''.$ffp_fanbid.'\');</script>';
-		$fwshort .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com  / $fwid beigas  -->\n".''."\n";
+		$fwshort .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/  / $fwid beigas  -->\n".''."\n";
 	// ------------------
 	
 		return $fwshort;
