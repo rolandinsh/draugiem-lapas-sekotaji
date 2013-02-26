@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
- * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-0
+ * Plugin URI: http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-0
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
  * Version: 3.5.0
  * Stable tag: 3.5.0
@@ -76,6 +76,7 @@ class MB_FrypePage_Plugin{
 		add_action( 'init', array( $this, 'inits' ));
 		add_action( 'plugin_row_meta', array( $this, 'set_plugin_meta' ), 10, 2);
 		add_action( 'frypefans', array( $this, 'ffp_shortcode' ));
+		add_action( 'wp_head', array( $this, 'ffp_headgen' ));
 		
 		// Load a text domain
 		load_plugin_textdomain( 'frypepage_widget', false, dirname(plugin_basename(__FILE__)) . '/lang/' ); 
@@ -101,6 +102,14 @@ class MB_FrypePage_Plugin{
 		}
 	}
 /**
+ * meta genarator
+ *
+ * @since 3.5.0
+*/
+	public function ffp_headgen(){
+		echo "\n".'<meta name="generator" content="http://mediabox.lv/wordpress-spraudni/?utm_source='.$this->ffpfolder.'-'.$this->version.'" />'."\n";	
+	}
+/**
  * Set plugin meta information.
  *
  * @since 0.1
@@ -110,7 +119,7 @@ class MB_FrypePage_Plugin{
 		if ($file == $plugin) {
 			return array_merge( $links, array( 
 				//'<a href="http://atbalsts.mediabox.lv/temats/svarigas-3-4-0-versijas-izmainas/" target="_blank"><span style="color: #c00; margin:0; border: 1px solid #E6DB55; padding: 2px 3px; background-color:#FFFFE0;border-radius: 3px;">' . __('Important!!!','frypepage_widget') . '</span></a>',
-				//'<a href="http://atbalsts.mediabox.lv/diskusija/draugiem-lv-biznesa-lapu-wordpress-spraudnis/#new-post">' . __('Support Forum','frypepage_widget') . '</a>',
+				'<a href="http://atbalsts.mediabox.lv/?utm_source='.get_home_url().'&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=MeblogFrypePage_Widget-'.$this->version.'">' . __('Support','frypepage_widget') . '</a>',
 				//'<a href="http://atbalsts.mediabox.lv/temats/ieteikumi/#new-post">' . __('Feature request','frypepage_widget') . '</a>',
 				//'<a href="http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis">' . __('Wiki page','frypepage_widget') . '</a>',
 				'<a href="http://umbrovskis.com/ziedo/">' . __('Donate','frypepage_widget') . '</a>'
@@ -137,7 +146,7 @@ class MB_FrypePage_Plugin{
 		), $atts));
 		// ------------------
 	
-		$fwshort = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com  / $fwid  -->\n";
+		$fwshort = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://Umbrovskis.com | http://MediaBox.lv | http://SimpleMediaCode.com / $fwid  -->\n";
 		$fwshort .='<style>#fansblock'.$fwid.'{width:'.$width.'px; height:'.$height.'px; overflow: hidden;}#fansblock'.$fwid.' div{ overflow:hidden; height:100%;}#fansblock'.$fwid.' iframe{ overflow:hidden; height:100%; min-height:264px;}</style>'; 
 		$fwshort .='<div id="fansblock'.$fwid.'"></div>';
 		
@@ -157,7 +166,7 @@ class MB_FrypePage_Plugin{
 var fans2 = new DApi.BizFans({name:'$ffps_name',showFans:$showfanss, count:$users, showSay:$say, saycount:$saytext });
 EOT;
 		$fwshort .='fans2.append(\''.$ffp_fanbid.'\');</script>';
-		$fwshort .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com  / $fwid beigas  -->\n".''."\n";
+		$fwshort .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://Umbrovskis.com | http://MediaBox.lv | http://SimpleMediaCode.com / $fwid beigas  -->\n".''."\n";
 	// ------------------
 	
 		return $fwshort;
