@@ -94,7 +94,9 @@ var fans = new DApi.BizFans( {
 } );
 fans.append( 'fansblock<?php echo $widgetid;?>' );		
 </script>
-<div class="dfoot"></div>
+<div class="dfoot">
+	<a href="http://mediabox.lv" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis
+</div>
 <?php 
 
 /* After widget (defined by themes). */
@@ -140,7 +142,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 		'wwidth' => '240',
 		'wheight' => '234',
 		'show_usersfrp' => '0',
-		'show_cssfrp' =>WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/widget.css',
+		'show_cssfrp' =>WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/draugiem-lapas-sekotaji.css',
 		'show_aboutpagelenght'=> '1000',
 		'show_saycount' => '3',
 		'dfp_u' => md5(mt_rand(100000000,time())),
@@ -197,12 +199,13 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 		<!-- Show CSS? Input -->
 		<p><label for="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>"><?php _e('StyleSheet (CSS) URL', 'frypepage_widget'); ?></label><br />
         <span class="small"><?php _e('Theme (CSS) URL', 'frypepage_widget'); ?>: <strong><?php bloginfo('stylesheet_url'); ?></strong></span><br />
-        <span class="small"><strong><?php echo WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/widget.css'; ?></strong></span><br />
-        	<input id="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>"
-				name="<?php echo $this->get_field_name( 'show_cssfrp' ); ?>"
-				value="<?php echo $instance['show_cssfrp']; ?>"
-				style="width:100%;"
-			/>
+        <span class="small"><strong><?php echo WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/draugiem-lapas-sekotaji.css'; ?></strong></span><br />
+<input 
+	id="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>" 
+	name="<?php echo $this->get_field_name( 'show_cssfrp' ); ?>"
+	value="<?php echo $instance['show_cssfrp']; ?>"
+	style="width:100%;" 
+/>
 		</p>
 		
 		<!-- Unique ID Input -->
@@ -216,9 +219,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 				style="width:100%;"
 			/>
 		</p>
-        <p>Šis darbs ir licencēts ar GPL.<br />
-        <img src="<?php echo plugins_url('draugiemlvlapas-fan-page').'/img';?>/creative-commons-by-nc-sa-88x31.png" width="88" height="31" alt="" /><br />
-        <span class="small">Atļaujas ārpus šīs licences ietvariem var iegūt <a href="http://umbrovskis.lv/autortiesibas/" target="_blank" title="Autortiesības">umbrovskis.lv</a> [&copy; 1982-<?php echo date('Y')+70;?>]</span></p>
+        <p>Licences noteikumi | <a href="http://umbrovskis.lv/autortiesibas/" target="_blank" title="Autortiesības">Umbrovskis.lv</a> [&copy; 1982-<?php echo date('Y')+70;?>]</span></p>
         
         
 		<div  style="display:none">
