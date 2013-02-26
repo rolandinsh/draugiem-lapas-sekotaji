@@ -70,7 +70,7 @@ class MeblogFrypePage_Widget extends WP_Widget {
 
 		/* Before widget (defined by themes). */
 		echo $before_widget;
-echo "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://Umbrovskis.com | http://MediaBox.lv | http://SimpleMediaCode.com -->\n".''."\n";
+echo "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com | MediaBox.lv | SimpleMediaCode.com -->\n".''."\n";
 		/* Display the widget title if one was input (before and after defined by themes). */
 		if ($title)	echo $before_title . $title . $after_title;?>
 <div id="fansblock<?php echo $widgetid;?>" class="usersfrp"></div>

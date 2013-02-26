@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
- * Plugin URI: http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-0
+ * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-1
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 3.5.0
- * Stable tag: 3.5.0
+ * Version: 3.5.1
+ * Stable tag: 3.5.1
  * Requires at least: 3.3
  * Tested up to: 3.5.1
  * Author: Rolands Umbrovskis
@@ -54,7 +54,7 @@ new MB_FrypePage_Plugin;
 
 
 class MB_FrypePage_Plugin{
-	public $version = '3.5.0';
+	public $version = '3.5.1';
 	public $frypiapiv = '1.937';
 	public $relx = 201301011135;
 	public $draugiemjsapi ='//www.draugiem.lv/api/api.js';
@@ -92,15 +92,6 @@ class MB_FrypePage_Plugin{
 	public function load_widgets(){
 		register_widget( 'MeblogFrypePage_Widget' );
 	}
-	
-	public function inits(){
-		$ishttpsurl = is_ssl() ? 'https:' : 'http:';
-		 
-		if( !is_admin()&&!smc_is_login_page()){
-			wp_register_script('draugiem_api',$ishttpsurl.$this->draugiemjsapi,array(),$this->frypiapiv, false);
-			wp_enqueue_script('draugiem_api');
-		}
-	}
 /**
  * meta genarator
  *
@@ -108,6 +99,17 @@ class MB_FrypePage_Plugin{
 */
 	public function ffp_headgen(){
 		echo "\n".'<meta name="generator" content="http://mediabox.lv/wordpress-spraudni/?utm_source='.$this->ffpfolder.'-'.$this->version.'" />'."\n";	
+	}
+
+	public function inits(){
+		$ishttpsurl = is_ssl() ? 'https:' : 'http:';
+		 
+		if( !is_admin()&&!smc_is_login_page()){
+			wp_register_script('draugiem_api',$ishttpsurl.$this->draugiemjsapi,array(),$this->frypiapiv, false);
+			wp_enqueue_script('draugiem_api');
+			wp_register_style( 'draugiem_sekotaji', WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/draugiem-lapas-sekotaji.css', array(), $this->version, 'all' );
+			wp_enqueue_style('draugiem_sekotaji');
+		}
 	}
 /**
  * Set plugin meta information.
@@ -145,7 +147,6 @@ class MB_FrypePage_Plugin{
 		'fwid'		=>	'951357456852' // any alphanum. MUST be UNIQE per page
 		), $atts));
 		// ------------------
-	
 		$fwshort = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://Umbrovskis.com | http://MediaBox.lv | http://SimpleMediaCode.com / $fwid  -->\n";
 		$fwshort .='<style>#fansblock'.$fwid.'{width:'.$width.'px; height:'.$height.'px; overflow: hidden;}#fansblock'.$fwid.' div{ overflow:hidden; height:100%;}#fansblock'.$fwid.' iframe{ overflow:hidden; height:100%; min-height:264px;}</style>'; 
 		$fwshort .='<div id="fansblock'.$fwid.'"></div>';
