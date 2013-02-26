@@ -3,8 +3,8 @@ Contributors: rolandinsh
 Donate link: http://xh.lv/wpdonate1
 Tags: sidebar, widget, frype, draugiem.lv, draugiem, fan page, frype.com, JSON, WPMU, WordPress Mustisite, WordPress MU, WPMS, draugiem, social networking, social network, fan widget, sidebar widget
 Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: 3.0.1
+Tested up to: 3.5.1
+Stable tag: 3.5.0
 License: SimpleMediaCode
 License URI: http://simplemediacode.com/license/
 
@@ -12,7 +12,7 @@ Draugiem.lv biznesa lapu un pasākumu fanu WordPress spraudnis draugiem.lv lieto
 
 == Description ==
 
-[Draugiem.lv biznesa lapu fanu WordPress spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) ir paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem ir mājas lapas vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
+[Draugiem.lv biznesa lapu fanu WordPress spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem mājas lapa vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
 
 Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://darbi.mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
 
@@ -53,6 +53,10 @@ You `MUST` have a page on draugiem.lv/lapas to use this widget.
 * Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
 
 == Changelog ==
+
+= 3.5.0 =
+* small updates. (height overflow hidden)
+* nelieli uzlabojumi.
 
 = 3.0 =
 * pilnībā pārrakstīts kods.
