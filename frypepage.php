@@ -107,7 +107,7 @@ class MB_FrypePage_Plugin{
 		if( !is_admin()&&!smc_is_login_page()){
 			wp_register_script('draugiem_api',$ishttpsurl.$this->draugiemjsapi,array(),$this->frypiapiv, false);
 			wp_enqueue_script('draugiem_api');
-			wp_register_style( 'draugiem_sekotaji', WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/draugiem-lapas-sekotaji.css', array(), $this->version, 'all' );
+			wp_register_style( 'draugiem_sekotaji', WP_PLUGIN_URL.'/'.$this->ffpfolder.'/js/draugiem-lapas-sekotaji.css', array(), $this->version, 'all' );
 			wp_enqueue_style('draugiem_sekotaji');
 		}
 	}
