@@ -3,10 +3,10 @@
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
  * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-1
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 3.5.1
+ * Version: 3.6.0
  * Stable tag: 3.5.1
  * Requires at least: 3.3
- * Tested up to: 3.5.1
+ * Tested up to: 3.6
  * Author: Rolands Umbrovskis
  * Author URI: http://umbrovskis.com
  * License: SimpleMediaCode
@@ -38,6 +38,12 @@
  * @todo Ja būs nepieciešamība izveidot dinamisko failu (JS/CSS), šis ir jāpārskata
  */
 if (!defined('ABSPATH')) exit;
+
+require 'vendor/autoload.php';
+
+$app = new \UmbrovskisDraugiemLapas\Frype();
+$app->setPluginDir(plugin_dir_path(__FILE__));
+$app->init();
 
 /**
  * Don't call me BABY (directly)
