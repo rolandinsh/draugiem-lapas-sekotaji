@@ -133,7 +133,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 	 */
 	function form( $instance ) {
 		
-		$ffpplugin = new MB_FrypePage_Plugin;
+		$ffpplugin = new FrypeLapas;
 		
 		/* Set up some default widget settings. */
 		$defaults = array(

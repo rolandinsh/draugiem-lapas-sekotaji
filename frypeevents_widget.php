@@ -9,7 +9,7 @@ if ( !function_exists( 'add_action' ) ) {
 
 new MB_FrypeEvents_Plugin;
 
-class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin{
+class MB_FrypeEvents_Plugin extends FrypeLapas{
 	public $eventsversion = '2.1.2';
 
 	public function __construct() {
