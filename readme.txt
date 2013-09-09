@@ -33,6 +33,7 @@ PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugi
 = Latviski: =
 * [Draugiem.lv biznesa lapu sekotāju spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
 * Apskaties citus [Wordpress risinājumus](http://mediabox.lv/wordpress/).
+* [Kļūdu pieteikšana](https://github.com/rolandinsh/draugiem-lapas-sekotaji/issues)
 
 = English =
 
@@ -50,8 +51,13 @@ You `MUST` have a page on draugiem.lv/lapas to use this widget.
 
 * [Draugiem.lv Business page Followers page](http://simplemediacode.info/wordpress-plugins/draugiem-lv-lapas-fan-page/).
 * Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
+* Found bug? [Post issues here](https://github.com/rolandinsh/draugiem-lapas-sekotaji/issues)
 
 == Changelog ==
+
+= 3.5.2 =
+* small updates.
+* nelieli uzlabojumi.
 
 = 3.5.0 =
 * small updates. (height overflow hidden)

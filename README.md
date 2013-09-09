@@ -24,6 +24,7 @@ PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugi
 
 - [Draugiem.lv biznesa lapu sekotāju spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
 - Apskaties citus [Wordpress risinājumus](http://mediabox.lv/wordpress/).
+- [Kļūdu pieteikšana](https://github.com/rolandinsh/draugiem-lapas-sekotaji/issues)
 
 ##Features
 
@@ -37,6 +38,7 @@ PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugi
 
 - [Draugiem.lv Business page Followers page](http://simplemediacode.info/wordpress-plugins/draugiem-lv-lapas-fan-page/).
 - Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
+- Found bug? [Post issues here](https://github.com/rolandinsh/draugiem-lapas-sekotaji/issues)
 
 ##Installation
 
