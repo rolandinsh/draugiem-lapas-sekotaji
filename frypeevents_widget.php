@@ -121,7 +121,8 @@ class Frype_EventWidget extends WP_Widget {
 		);
 		$instance = wp_parse_args( (array) $eventinstance, $eventdefaults );
 
-		?>
+?>
+
 		<p>
 		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Frype Event Widget Title:', 'frypepage_widget'); ?></label> 
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $instance[ 'title' ] ); ?>" />
@@ -138,9 +139,8 @@ class Frype_EventWidget extends WP_Widget {
 		<label for="<?php echo $this->get_field_id('frypeeventwwidth'); ?>"><?php _e('Width:', 'frypepage_widget'); ?></label> 
 		<input class="widefat" id="<?php echo $this->get_field_id('frypeeventwwidth'); ?>" name="<?php echo $this->get_field_name('frypeeventwwidth'); ?>" type="text" value="<?php echo esc_attr( $instance[ 'frypeeventwwidth' ] ); ?>" />
 		</p>
-        
-        
-		<?php 
+
+<?php 
 	}
 
 } // class Frype_EventWidget

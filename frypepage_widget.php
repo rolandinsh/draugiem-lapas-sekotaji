@@ -148,7 +148,8 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 		'dfp_u' => md5(mt_rand(100000000,time())),
 		'show_saytexts'=>'0'
 		);
-		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
+		$instance = wp_parse_args( (array) $instance, $defaults ); 
+?>
 
 		<!-- Widget Title: Text Input -->
 		<p>
@@ -208,10 +209,11 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 />
 		</p>
 		
-		<!-- Unique ID Input -->
-		<?php 
+<!-- Unique ID Input -->
+<?php 
 		$dfp_uid = $instance['dfp_u'];
-		if($dfp_uid==''||!$dfp_uid): $dfp_uid = md5(mt_rand(100000000,time())); endif;?>
+		if($dfp_uid==''||!$dfp_uid): $dfp_uid = md5(mt_rand(100000000,time())); endif;
+?>
 		<p><label for="<?php echo $this->get_field_id( 'dfp_u' ); ?>"><?php _e('Unique ID', 'frypepage_widget'); ?></label><br />
         	<input id="<?php echo $this->get_field_id( 'dfp_u' ); ?>"
 				name="<?php echo $this->get_field_name( 'dfp_u' ); ?>"
@@ -223,20 +225,19 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
         
         
 		<div  style="display:none">
-		<?php 
+<?php 
 		/**
 		 * @todo sekot līdzi vai parametri netiks atjaunoti, ja nē, tad dzēsīšu ārā
 		 * @date 2011-08-12
 		*/
-		 ?>
-		
+?>
+
 				<!-- Show lenght? Input -->
 				<p><label for="<?php echo $this->get_field_id( 'show_aboutpagelenght' ); ?>"><?php _e('Lenght of page description', 'frypepage_widget'); ?></label><br />
 					<input id="<?php echo $this->get_field_id( 'show_aboutpagelenght' ); ?>" name="<?php echo $this->get_field_name( 'show_aboutpagelenght' ); ?>" value="<?php echo $instance['show_aboutpagelenght']; ?>" style="width:100%;" />
 				</p>
-		
 		</div>
-		
+
         <!-- HELP link-->
         <p><img src="<?php echo plugins_url('draugiemlvlapas-fan-page').'/img/'; /* @todo FRYPEFANPAGEI */ ?>help.png" width="16" height="16" alt="" /> <a href="<?php echo $ffpplugin->ffpinfo;?>?utm_campaign=WordPress_Plugins&utm_content=<?php echo $ffpplugin->ffpfolder.'-v'.$ffpplugin->version;?>_adminhelp&utm_medium=textlink&utm_source=<?php echo get_home_url();?>" title="draugiem.lv/lapas fanu lapa" target="_blank"><?php _e('Help?', 'frypepage_widget'); ?></a> <?php _e('(in new window/tab)', 'frypepage_widget'); ?></p>
 <?php
