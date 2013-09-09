@@ -142,7 +142,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 		'wwidth' => '240',
 		'wheight' => '234',
 		'show_usersfrp' => '0',
-		'show_cssfrp' =>WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/draugiem-lapas-sekotaji.css',
+		'show_cssfrp' =>WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/'.$ffpplugin->cssfolder.'/draugiem-lapas-sekotaji.css',
 		'show_aboutpagelenght'=> '1000',
 		'show_saycount' => '3',
 		'dfp_u' => md5(mt_rand(100000000,time())),
@@ -200,7 +200,7 @@ echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n
 		<!-- Show CSS? Input -->
 		<p><label for="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>"><?php _e('StyleSheet (CSS) URL', 'frypepage_widget'); ?></label><br />
         <span class="small"><?php _e('Theme (CSS) URL', 'frypepage_widget'); ?>: <strong><?php bloginfo('stylesheet_url'); ?></strong></span><br />
-        <span class="small"><strong><?php echo WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/js/draugiem-lapas-sekotaji.css'; ?></strong></span><br />
+        <span class="small"><strong><?php echo WP_PLUGIN_URL.'/'.$ffpplugin->ffpfolder.'/'.$ffpplugin->cssfolder.'/draugiem-lapas-sekotaji.css'; ?></strong></span><br />
 <input 
 	id="<?php echo $this->get_field_id( 'show_cssfrp' ); ?>" 
 	name="<?php echo $this->get_field_name( 'show_cssfrp' ); ?>"

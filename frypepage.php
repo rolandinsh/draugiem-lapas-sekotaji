@@ -4,7 +4,7 @@
  * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-1
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
  * Version: 3.5.2
- * Stable tag: 3.5.1
+ * Stable tag: 3.5.2
  * Requires at least: 3.3
  * Tested up to: 3.5.1
  * Author: Rolands Umbrovskis
@@ -55,11 +55,13 @@ new MB_FrypePage_Plugin;
 
 class MB_FrypePage_Plugin{
 	public $version = '3.5.2';
-	public $frypiapiv = '1.937';
+	public $frypiapiv = '2242';
 	public $relx = 201309091928;
 	public $draugiemjsapi ='//www.draugiem.lv/api/api.js';
 	public $ffpfolder ='draugiemlvlapas-fan-page';
 	public $ffpinfo ='http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/';
+	public $cssfolder ='css';
+	public $jsfolder ='js';
 
 	const FFPSH = 'ffpsh';
 	const OPTINLVURI1 = 'http://darbi.mediabox.lv/wordpress-jaunumi-e-pasta/';
@@ -107,7 +109,7 @@ class MB_FrypePage_Plugin{
 		if( !is_admin()&&!smc_is_login_page()){
 			wp_register_script('draugiem_api',$ishttpsurl.$this->draugiemjsapi,array(),$this->frypiapiv, false);
 			wp_enqueue_script('draugiem_api');
-			wp_register_style( 'draugiem_sekotaji', WP_PLUGIN_URL.'/'.$this->ffpfolder.'/js/draugiem-lapas-sekotaji.css', array(), $this->version, 'all' );
+			wp_register_style( 'draugiem_sekotaji', WP_PLUGIN_URL.'/'.$this->ffpfolder.'/'.$this->cssfolder.'/draugiem-lapas-sekotaji.css', array(), $this->version, 'all' );
 			wp_enqueue_style('draugiem_sekotaji');
 		}
 	}
