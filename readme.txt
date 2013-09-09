@@ -4,7 +4,7 @@ Donate link: http://xh.lv/wpdonate1
 Tags: sidebar, widget, frype, draugiem.lv, draugiem, fan page, frype.com, JSON, WPMU, WordPress Mustisite, WordPress MU, WPMS, draugiem, social networking, social network, fan widget, sidebar widget
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 3.6
+Stable tag: 3.5.2
 License: SimpleMediaCode
 License URI: http://simplemediacode.com/license/
 
