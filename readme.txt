@@ -33,7 +33,6 @@ PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugi
 = Latviski: =
 * [Draugiem.lv biznesa lapu sekotāju spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
 * Apskaties citus [Wordpress risinājumus](http://mediabox.lv/wordpress/).
-* [Spraudņa Wiki lapa](http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis)
 
 = English =
 
