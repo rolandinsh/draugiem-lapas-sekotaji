@@ -1,8 +1,15 @@
 .dfoot{
-	border-style: none solid solid;
-    border-width: 0 1px 1px;
+	border: none;
     font-size: 0.86em;
     padding: 4px;
-	background-color:#fff;
+	background-color:transparent;
+}
+.dfoot .dfoot-text{
+	text-shadow:1px 0 5px #fff;
+	color:#222;
+	font-weight:600;
+}
+.dfoot a{
+	text-decoration:none;
 }
 .mediabox-webdev-fansblock{ font-weight:600;}

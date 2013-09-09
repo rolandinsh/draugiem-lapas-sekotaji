@@ -95,7 +95,7 @@ var fans = new DApi.BizFans( {
 fans.append( 'fansblock<?php echo $widgetid;?>' );		
 </script>
 <div class="dfoot">
-	<a href="http://mediabox.lv" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis
+	<span class="dfoot-text"><a href="http://mediabox.lv" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis</span>
 </div>
 <?php 
 

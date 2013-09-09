@@ -3,7 +3,7 @@
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
  * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-1
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 3.5.1
+ * Version: 3.5.2
  * Stable tag: 3.5.1
  * Requires at least: 3.3
  * Tested up to: 3.5.1
@@ -54,9 +54,9 @@ new MB_FrypePage_Plugin;
 
 
 class MB_FrypePage_Plugin{
-	public $version = '3.5.1';
+	public $version = '3.5.2';
 	public $frypiapiv = '1.937';
-	public $relx = 201301011135;
+	public $relx = 201309091928;
 	public $draugiemjsapi ='//www.draugiem.lv/api/api.js';
 	public $ffpfolder ='draugiemlvlapas-fan-page';
 	public $ffpinfo ='http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/';
@@ -193,7 +193,14 @@ if ( !function_exists( 'smc_is_login_page' ) ) {
 */
 register_deactivation_hook( __FILE__, 'ffp_deactivate_plugin' );
 function ffp_deactivate_plugin(){unregister_widget( 'MeblogFrypePage_Widget' );}
-
-
-include_once(dirname(__FILE__).'/frypepage_widget.php');
-include_once(dirname(__FILE__).'/frypeevents_widget.php');
+/**
+* Load widgets
+*/
+$frypewidgets = array(
+  'page',
+  'events',
+);
+foreach ($frypewidgets as $frypewidget) {
+	include_once(dirname(__FILE__).'/frype' . $frypewidget . '_widget.php');
+	add_action('wpfp_action_' . $frypewidget, 'wpdraugiem_' . $frypewidget, 10, 2);
+}
