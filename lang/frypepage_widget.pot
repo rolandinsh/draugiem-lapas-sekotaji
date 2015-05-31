@@ -131,3 +131,8 @@ msgstr ""
 #. Description of an extension
 msgid "Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan"
 msgstr ""
+
+#. Links
+msgid "Only paid support"
+msgstr ""
+

@@ -4,10 +4,10 @@
  * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
  * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-1
  * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 3.5.2
- * Stable tag: 3.5.2
+ * Version: 3.5.3
+ * Stable tag: 3.5.3
  * Requires at least: 3.3
- * Tested up to: 3.5.1
+ * Tested up to: 4.2.2
  * Author: Rolands Umbrovskis
  * Author URI: http://umbrovskis.com
  * License: SimpleMediaCode
@@ -55,9 +55,9 @@ new MB_FrypePage_Plugin;
 class MB_FrypePage_Plugin
 {
 
-    public $version = '3.5.2';
-    public $frypiapiv = '2242';
-    public $relx = 201309091928;
+    public $version = '3.5.3';
+    public $frypiapiv = '2243';
+    public $relx = 201505311353;
     public $draugiemjsapi = '//www.draugiem.lv/api/api.js';
     public $ffpfolder = 'draugiemlvlapas-fan-page';
     public $ffpinfo = 'http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/';
@@ -66,7 +66,7 @@ class MB_FrypePage_Plugin
 
     const FFPSH = 'ffpsh';
     const OPTINLVURI1 = 'http://darbi.mediabox.lv/wordpress-jaunumi-e-pasta/';
-    const OPTINENURI1 = 'http://xh.lv/smcnewsletter';
+    const OPTINENURI1 = '';// 'http://xh.lv/smcnewsletter';
 
 //define('FRYPEFANPAGEURI',plugin_dir_url(__FILE__)); // widget url location @since 2.1
 //define('FRYPEFANPAGEI',plugins_url(FRYPEFANPAGEF).'/img'); // Image location @since 0.1.6
@@ -130,11 +130,8 @@ class MB_FrypePage_Plugin
         $plugin = plugin_basename(__FILE__);
         if ($file == $plugin) {
             return array_merge($links, array(
-                //'<a href="http://atbalsts.mediabox.lv/temats/svarigas-3-4-0-versijas-izmainas/" target="_blank"><span style="color: #c00; margin:0; border: 1px solid #E6DB55; padding: 2px 3px; background-color:#FFFFE0;border-radius: 3px;">' . __('Important!!!','frypepage_widget') . '</span></a>',
-                '<a href="http://atbalsts.mediabox.lv/?utm_source=' . get_home_url() . '&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=MeblogFrypePage_Widget-' . $this->version . '">' . __('Support', 'frypepage_widget') . '</a>',
-                //'<a href="http://atbalsts.mediabox.lv/temats/ieteikumi/#new-post">' . __('Feature request','frypepage_widget') . '</a>',
-                //'<a href="http://atbalsts.mediabox.lv/wiki/Draugiem.lv_biznesa_lapu_fanu_Wordpress_spraudnis">' . __('Wiki page','frypepage_widget') . '</a>',
-                '<a href="http://umbrovskis.com/ziedo/">' . __('Donate', 'frypepage_widget') . '</a>'
+               // '<a href="http://simplemediacode.com/" target="_blank"><span style="color: #c00; margin:0; border: 1px solid #E6DB55; padding: 2px 3px; background-color:#FFFFE0;border-radius: 3px;">' . __('Only paid support','frypepage_widget') . '</span></a>',
+                '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z4ALL9WUMY3CL&lc=LV&item_name=Umbrovskis.%20WordPress%20plugins&item_number=003&currency_code=EUR&bn=PP-DonationsBF:btn_donate_SM.gif:NonHosted">' . __('Donate', 'frypepage_widget') . '</a>'
             ));
         }
         return $links;

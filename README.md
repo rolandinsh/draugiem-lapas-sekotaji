@@ -4,15 +4,14 @@
 
 [Draugiem.lv biznesa lapu fanu WordPress spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem mājas lapa vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
 
-Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://darbi.mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
+Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
 
-Lai lietotu spraudni ir jābūt izveidotai savai lapai [draugiem.lv/lapas](http://e-art.lv/x/draugiemlapas).
+Lai lietotu spraudni ir jābūt izveidotai savai lapai [draugiem.lv/lapas](http://go.mediabox.lv/draugiemlapas).
 
 + [GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) 
-+ [code.google.com SVN](http://code.google.com/p/wordpress-draugiem-lapas-fani-plugin/) 
 + [MediaBox.lv](http://mediabox.lv/ "WordPress mājas lapu izstrāde/atbalsts") 
 
-PS. Apskati [WordPress Draugiem "ieteikšanu"](http://wordpress.org/extend/plugins/wordpress-draugiem/)
+PS. Apskati [WordPress Draugiem "ieteikšanu"](https://wordpress.org/plugins/wordpress-draugiem/)
 
 ##Iespējas
 

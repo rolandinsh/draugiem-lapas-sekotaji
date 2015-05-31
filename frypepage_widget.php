@@ -102,7 +102,7 @@ class MeblogFrypePage_Widget extends WP_Widget
                     fans.append('fansblock<?php echo $widgetid; ?>');
         </script>
         <div class="dfoot">
-          <span class="dfoot-text"><a href="http://mediabox.lv" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis</span>
+          <span class="dfoot-text dfmediabox"><a href="http://mediabox.lv/" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis</span>
         </div>
         <?php
         /* After widget (defined by themes). */
