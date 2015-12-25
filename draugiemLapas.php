@@ -1,37 +1,6 @@
 <?php
 
 /**
- * Plugin Name: Draugiem.lv biznesa lapu sekotāju spraudnis
- * Plugin URI: http://darbi.mediabox.lv/draugiem-lvlapas-fanu-wordpress-spraudnis/?utm_source=WPplugin%3Adraugiemlv-lapas-fan-page&utm_medium=wordpressplugin&utm_campaign=FreeWordPressPlugins&utm_content=v-3-5-1
- * Description: Parāda draugiem.lv/lapas lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu, Shows draugiem.lv/lapas users, fan count, logo and possibility to became a fan
- * Version: 3.5.3
- * Stable tag: 3.5.3
- * Requires at least: 3.3
- * Tested up to: 4.2.2
- * Author: Rolands Umbrovskis
- * Author URI: http://umbrovskis.com
- * License: SimpleMediaCode
- * License URI: http://simplemediacode.com/license/gpl/
- */
-/*
-  Copyright 2010-2015  Rolands Umbrovskis (info at mediabox dot lv)
-
-  This program is free software; you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation; either version 2 of the License, or
-  (at your option) any later version.
-
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-
-  You should have received a copy of the GNU General Public License
-  along with this program; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
- */
-
-/**
  * Exit if accessed directly (security)
  * jeb parādam mēli :P
  * @since 2.1
@@ -66,12 +35,10 @@ class MB_FrypePage_Plugin
 
     const FFPSH = 'ffpsh';
     const OPTINLVURI1 = 'http://darbi.mediabox.lv/wordpress-jaunumi-e-pasta/';
-    const OPTINENURI1 = '';// 'http://xh.lv/smcnewsletter';
+    const OPTINENURI1 = ''; // 'http://xh.lv/smcnewsletter';
 
 //define('FRYPEFANPAGEURI',plugin_dir_url(__FILE__)); // widget url location @since 2.1
 //define('FRYPEFANPAGEI',plugins_url(FRYPEFANPAGEF).'/img'); // Image location @since 0.1.6
-
-
 
     function __construct()
     {
@@ -130,7 +97,7 @@ class MB_FrypePage_Plugin
         $plugin = plugin_basename(__FILE__);
         if ($file == $plugin) {
             return array_merge($links, array(
-               // '<a href="http://simplemediacode.com/" target="_blank"><span style="color: #c00; margin:0; border: 1px solid #E6DB55; padding: 2px 3px; background-color:#FFFFE0;border-radius: 3px;">' . __('Only paid support','frypepage_widget') . '</span></a>',
+                // '<a href="http://simplemediacode.com/" target="_blank"><span style="color: #c00; margin:0; border: 1px solid #E6DB55; padding: 2px 3px; background-color:#FFFFE0;border-radius: 3px;">' . __('Only paid support','frypepage_widget') . '</span></a>',
                 '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z4ALL9WUMY3CL&lc=LV&item_name=Umbrovskis.%20WordPress%20plugins&item_number=003&currency_code=EUR&bn=PP-DonationsBF:btn_donate_SM.gif:NonHosted">' . __('Donate', 'frypepage_widget') . '</a>'
             ));
         }
