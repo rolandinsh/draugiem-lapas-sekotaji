@@ -2,14 +2,14 @@
 
 ***Draugiem.lv biznesa lapu un pasākumu fanu WordPress spraudnis draugiem.lv lietotājiem***
 
-[Draugiem.lv biznesa lapu fanu WordPress spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem mājas lapa vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
+[Draugiem.lv biznesa lapu fanu WordPress spraudnis](https://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) paredzēts tiem draugiem.lv/lapas īpašniekiem, kuriem mājas lapa vai blogs ir veidots uz WordPress platformas. WordPress spraudnis parāda draugiem.lv/lapas nosaukumu, aprakstu, lietotājus, to skaitu, logo un iespēju kļūt par lapas fanu.
 
-Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](http://mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
+Visi jaunumi par šo spraudni atrodami [MediaBox.lv Darbos](https://mediabox.lv/tag/draugiem-lvlapas-fanu-lapa/)
 
 Lai lietotu spraudni ir jābūt izveidotai savai lapai [draugiem.lv/lapas](http://go.mediabox.lv/draugiemlapas).
 
 + [GIT](https://github.com/rolandinsh/draugiem-lapas-sekotaji) 
-+ [MediaBox.lv](http://mediabox.lv/ "WordPress mājas lapu izstrāde/atbalsts") 
++ [MediaBox.lv](https://mediabox.lv/ "WordPress mājas lapu izstrāde/atbalsts") 
 
 PS. Apskati [WordPress Draugiem "ieteikšanu"](https://wordpress.org/plugins/wordpress-draugiem/)
 
@@ -21,8 +21,8 @@ PS. Apskati [WordPress Draugiem "ieteikšanu"](https://wordpress.org/plugins/wor
 
 ### Latviski:
 
-- [Draugiem.lv biznesa lapu sekotāju spraudnis](http://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
-- Apskaties citus [Wordpress risinājumus](http://mediabox.lv/wordpress/).
+- [Draugiem.lv biznesa lapu sekotāju spraudnis](https://mediabox.lv/wordpress-spraudni/draugiem-lv-biznesa-lapu-fanu-wordpress-spraudnis/) latviski.
+- Apskaties citus [Wordpress risinājumus](https://mediabox.lv/wordpress/).
 - [Kļūdu pieteikšana](https://github.com/rolandinsh/draugiem-lapas-sekotaji/issues)
 
 ##Features
@@ -35,8 +35,8 @@ PS. Apskati [WordPress Draugiem "ieteikšanu"](https://wordpress.org/plugins/wor
 
 ###Links
 
-- [Draugiem.lv Business page Followers page](http://simplemediacode.info/wordpress-plugins/draugiem-lv-lapas-fan-page/).
-- Other [WordPress plugins](http://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
+- [Draugiem.lv Business page Followers page](https://simplemediacode.info/wordpress-plugins/draugiem-lv-lapas-fan-page/).
+- Other [WordPress plugins](https://simplemediacode.info/wordpress-plugins/) by `Umbrovskis.com` on SimpleMediaCode.com (English).
 - Found bug? [Post issues here](https://github.com/rolandinsh/draugiem-lapas-sekotaji/issues)
 
 ##Installation

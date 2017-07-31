@@ -2,7 +2,24 @@
 /*
  * draugiem-lapas-sekotaji CSS
  * @since 3.5.3
- * @version 1.0
+ * @version 1.1.0
 */
- 
 
+.dfoot{
+    border: none;
+    font-size: 9px;
+    padding: 4px;
+    background-color:transparent;
+    font-family:  'Open Sans','Arimo','Roboto Condensed', Verdana, Arial, Helvetica, sans-serif normal;
+}
+.dfoot .dfoot-text{
+    text-shadow:1px 0 5px #fff;
+    color:#222;
+    font-weight:600;
+}
+.dfoot a{
+    text-decoration:none;
+}
+.mediabox-webdev-fansblock{
+    font-weight:600;
+}

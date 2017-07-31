@@ -12,13 +12,13 @@ new MB_FrypeEvents_Plugin;
 class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin
 {
 
-    public $eventsversion = '2.1.2';
+    public $eventsversion = '2.1.3';
 
     public function __construct()
     {
         do_action('meblogfrypeevent_preinit');
-        add_shortcode('frypeevent', array($this, 'ffew_shortcode'));
-        add_shortcode('frypevent', array($this, 'ffew_shortcode'));
+        add_shortcode('frypeevent', array($this, 'ffewShortcode'));
+        add_shortcode('frypevent', array($this, 'ffewShortcode'));
         add_action('widgets_init', array($this, 'register_widget_ffpeventwidget'));
 
         do_action('meblogfrypeevent_sufinit');
@@ -35,7 +35,7 @@ class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin
      * @date 2011-11-24
      */
 
-    public function ffew_shortcode($atts)
+    public function ffewShortcode($atts)
     {
         extract(shortcode_atts(array(
             'id' => '18368189', // int() = 123456789
@@ -47,7 +47,7 @@ class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin
         // USAGE / LIETOŠANA
         // [frypeevent id='18368189' width='300' users='5' uqid='951357456852']
 
-        $fefs = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis " . $this->eventsversion . " via http://umbrovskis.com  / Pasākumi: $id ($uqid) -->\n";
+        $fefs = "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis " . $this->eventsversion . " via https://umbrovskis.com  / Pasākumi: $id ($uqid) -->\n";
         $fefs .='<style>#evFansBlock' . $id . $uqid . ' { width:' . $width . 'px;border: 1px solid #c9c9c9; }</style>';
         $fefs .='<div id="evFansBlock' . $id . $uqid . '"></div>';
 
@@ -56,7 +56,7 @@ class MB_FrypeEvents_Plugin extends MB_FrypePage_Plugin
 	var fans = new DApi.EvFans( {name:'ev/$id/', count:$users} );
 EOT;
         $fefs .="\n" . 'fans.append(\'evFansBlock' . $id . $uqid . '\');</script>';
-        $fefs .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis " . $this->eventsversion . " via http://umbrovskis.com  / Pasākumi: $id ($uqid) beigas  -->\n" . '' . "\n";
+        $fefs .="\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis " . $this->eventsversion . " via https://umbrovskis.com  / Pasākumi: $id ($uqid) beigas  -->\n" . '' . "\n";
 
         return $fefs;
     }
@@ -96,7 +96,7 @@ class Frype_EventWidget extends WP_Widget
         }
 
 
-        echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com  / Event: ' . $frypeeventid . '  -->';
+        echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via https://umbrovskis.com  / Event: ' . $frypeeventid . '  -->';
         ?>
         <div id="evFansBlock<?php echo $frypeeventid; ?>"></div>
         <style>#evFansBlock<?php echo $frypeeventid; ?> { width:<?php echo $frypeeventwwidth; ?>px;border: 1px solid #c9c9c9; }</style>
@@ -108,7 +108,7 @@ class Frype_EventWidget extends WP_Widget
             fans.append('evFansBlock<?php echo $frypeeventid; ?>');
         </script>
         <?php
-        echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ' . FFPVERSION . ' via http://umbrovskis.com  / ' . $frypeeventid . ' beigas  -->';
+        echo '<!-- Draugiem.lv biznesa lapu sekotāju spraudnis ' . FFPVERSION . ' via https://umbrovskis.com  / ' . $frypeeventid . ' beigas  -->';
         echo $after_widget;
     }
 

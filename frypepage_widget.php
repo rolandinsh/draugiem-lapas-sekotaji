@@ -6,14 +6,15 @@
  * the settings, form, display, and update.
  *
  * @since 0.1
- * @version 0.2
- * @date 2011-01-21
+ * @version 1.0.0
+ * @date 2017-07-31
  */
 // Fun starts here
 
 class MeblogFrypePage_Widget extends WP_Widget
 {
 
+    public $mbffpversion = '1.0.0';
     /**
      * Widget setup.
      */
@@ -74,7 +75,7 @@ class MeblogFrypePage_Widget extends WP_Widget
 
         /* Before widget (defined by themes). */
         echo $before_widget;
-        echo "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis via http://umbrovskis.com | MediaBox.lv | SimpleMediaCode.com -->\n" . '' . "\n";
+        echo "\n\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis (lapu logdaļa ".$this->mbffpversion.") via https://umbrovskis.com | https://MediaBox.lv | https://SimpleMediaCode.com -->\n" . '' . "\n";
         /* Display the widget title if one was input (before and after defined by themes). */
         if ($title)
             echo $before_title . $title . $after_title;
@@ -102,12 +103,12 @@ class MeblogFrypePage_Widget extends WP_Widget
                     fans.append('fansblock<?php echo $widgetid; ?>');
         </script>
         <div class="dfoot">
-          <span class="dfoot-text dfmediabox"><a href="http://mediabox.lv/" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis</span>
+          <span class="dfoot-text dfmediabox"><a href="https://mediabox.lv/" title="WordPress mājas lapu izstrāde"><span style="color:#900">Media</span><span style="color:#000;">Box.lv</span></a> WordPress spraudnis</span>
         </div>
         <?php
         /* After widget (defined by themes). */
         echo $after_widget;
-        echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer -->\n\n";
+        echo "\n<!-- Draugiem.lv biznesa lapu sekotāju spraudnis beidzas footer https://umbrovskis.com | https://MediaBox.lv | https://SimpleMediaCode.com  -->\n\n";
     }
 
     /**
@@ -142,7 +143,7 @@ class MeblogFrypePage_Widget extends WP_Widget
     function form($instance)
     {
 
-        $ffpplugin = new MB_FrypePage_Plugin;
+        $ffpplugin = new MB_FrypePage_Plugin();
 
         /* Set up some default widget settings. */
         $defaults = array(
@@ -235,7 +236,7 @@ class MeblogFrypePage_Widget extends WP_Widget
                  style="width:100%;"
                  />
         </p>
-        <p>Licences noteikumi | <a href="http://umbrovskis.lv/autortiesibas/" target="_blank" title="Autortiesības">Umbrovskis.lv</a> [&copy; 1982-<?php echo date('Y') + 70; ?>]</span></p>
+        <p>Licences noteikumi | <a href="https://umbrovskis.lv/?utm_campaign=WordPress_Plugins&utm_content=<?php echo $ffpplugin->ffpfolder . '-v' . $ffpplugin->version; ?>_adminhelp&utm_medium=textlink&utm_source=<?php echo get_home_url(); ?>" target="_blank" title="Autortiesības">Umbrovskis.lv</a></span></p>
 
 
         <div  style="display:none">
