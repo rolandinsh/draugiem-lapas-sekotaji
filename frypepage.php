@@ -14,7 +14,7 @@
  * License URI: http://simplemediacode.com/license/gpl/
  */
 /*
-  Copyright 2010-2015  Rolands Umbrovskis (info at mediabox dot lv)
+  Copyright 2010  Rolands Umbrovskis (info at mediabox dot lv)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
